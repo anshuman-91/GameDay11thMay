@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "838",
+    "fabricId" : "920",
     "frontEndLanguage" : "python",
     "mode" : "batch",
     "interimMode" : "Full",
@@ -21,6 +21,10 @@
       },
       "fabrics" : {
         "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "gamedayfabric" : {
           "type" : "record",
           "fields" : [ ]
         },
@@ -67,21 +71,7 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "KMshb-Ue3cKp-MihbcMkU",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "format",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "example",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ]
       },
@@ -106,61 +96,7 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "MSemxX0bgLN0zxG2CTOyw",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "490",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "491",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "2342374324123",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "12321",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "-3123.123",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "false",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "45734.345341",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "r#$%@#4!*&^()_=ASD~!245",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "2009-02-10",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "2009-04-11T10:20:44.000Z",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ]
       },
