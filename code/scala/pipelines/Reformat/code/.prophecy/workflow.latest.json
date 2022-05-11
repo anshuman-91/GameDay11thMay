@@ -20,19 +20,15 @@
         "fields" : [ ]
       },
       "fabrics" : {
-        "dev" : {
-          "type" : "record",
-          "fields" : [ ]
-        },
-        "dev1" : {
-          "type" : "record",
-          "fields" : [ ]
-        },
-        "dev2" : {
+        "anshuman" : {
           "type" : "record",
           "fields" : [ ]
         },
         "gamedayfabric" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
           "type" : "record",
           "fields" : [ ]
         }
@@ -75,21 +71,7 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "KMshb-Ue3cKp-MihbcMkU",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "format",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "example",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ]
       },

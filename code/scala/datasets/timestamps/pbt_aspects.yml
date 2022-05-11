@@ -7,6 +7,6 @@ schema:
     nullable: true
     metadata: {}
   - name: example
-    type: string
+    type: timestamp
     nullable: true
     metadata: {}
