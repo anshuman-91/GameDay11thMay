@@ -1,0 +1,22 @@
+name: GameDay11thMay
+description: ''
+version: 0.0.1-SNAPSHOT
+author: anshuman@simpledatalabs.com
+pipelines:
+  pipelines/Reformat:
+    name: Reformat
+    description: null
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-11 06:53:24'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+datasets: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+dependencies: []
+template: '[]'
