@@ -6,7 +6,8 @@ setup(
     packages=find_packages(include=('job*',)),
     description='Reformat',
     install_requires=[
-        'pyhocon==0.3.59'
+        'pyhocon==0.3.59',
+        'prophecy-libs==0.1.3'
     ],
     entry_points={
         'console_scripts': [

@@ -6,8 +6,8 @@ from job.udfs.UDFs import *
 
 def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
-        col("format").alias("format"), 
-        col("example").alias("example"), 
+        col("format"), 
+        col("example"), 
         when(col("example").isNotNull(), to_timestamp(col("example"), ""))\
           .otherwise(col("example"))\
           .alias("parsed_example")
