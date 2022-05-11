@@ -52,6 +52,30 @@
     "sourcePort" : "SkLcKNLgZdwaHvSKT-7dT",
     "target" : "3oMEQXpRlUPYO09XVKyKM",
     "targetPort" : "oE8C3IlWt2hCpASxqmt7F"
+  }, {
+    "id" : "O1iQXYpMmhzzogiVdsh7L",
+    "source" : "3oMEQXpRlUPYO09XVKyKM",
+    "sourcePort" : "Zr5rGGxj3YouEhf0-Sa37",
+    "target" : "B5vjpzwDzFMMCF-iCXZ0x",
+    "targetPort" : "PMn-2_BjL1eLMw_7IHCmt"
+  }, {
+    "id" : "WGD2mfiuKAD1x9Orhy0TR",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "i3iJfPpcB6bw5HeVlpBiu",
+    "targetPort" : "Ww3MHJM5pX9ejyXAFj8uZ"
+  }, {
+    "id" : "I458vYl6TIzZ1K72EdnEC",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "DHEK-OBQxFMefgpL0XdLG",
+    "targetPort" : "ejh84OO1ukMn7BfjFGiaO"
+  }, {
+    "id" : "C2GopPKzLRPORzhrClSqI",
+    "source" : "DHEK-OBQxFMefgpL0XdLG",
+    "sourcePort" : "QGIaxO4heuyzaQHe7DGeI",
+    "target" : "DwRROmocQoCQGnpHNX2FZ",
+    "targetPort" : "K3FKExJi7RzmQ8Y35slEx"
   } ],
   "processes" : {
     "etKPPFcZI30YwU6FsoGD0" : {
@@ -60,8 +84,8 @@
       "metadata" : {
         "label" : "Source_1",
         "slug" : "Source_1",
-        "x" : -520,
-        "y" : 322,
+        "x" : -974,
+        "y" : 264,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -93,14 +117,164 @@
         "datasetId" : "4483/datasets/timestamps"
       }
     },
+    "B5vjpzwDzFMMCF-iCXZ0x" : {
+      "id" : "B5vjpzwDzFMMCF-iCXZ0x",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "slug" : "Reformat_3",
+        "x" : -304,
+        "y" : 297,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PMn-2_BjL1eLMw_7IHCmt",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "yszOiyZZl9S450GYyf8iE",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "DwRROmocQoCQGnpHNX2FZ" : {
+      "id" : "DwRROmocQoCQGnpHNX2FZ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_4",
+        "slug" : "Reformat_4",
+        "x" : -591,
+        "y" : 440,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "K3FKExJi7RzmQ8Y35slEx",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "9D6Uh7sDowAgHHIz0-2Pm",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "DHEK-OBQxFMefgpL0XdLG" : {
+      "id" : "DHEK-OBQxFMefgpL0XdLG",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : -792,
+        "y" : 444,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ejh84OO1ukMn7BfjFGiaO",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "QGIaxO4heuyzaQHe7DGeI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "ejh84OO1ukMn7BfjFGiaO##example", "ejh84OO1ukMn7BfjFGiaO##format" ],
+        "expressions" : [ {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "upper(col(\"format\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
     "TCoizzqp21vgV4kif_tsZ" : {
       "id" : "TCoizzqp21vgV4kif_tsZ",
       "component" : "Source",
       "metadata" : {
         "label" : "Source_0",
         "slug" : "Source_0",
-        "x" : -130,
-        "y" : 155,
+        "x" : -169,
+        "y" : -89,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -124,8 +298,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : -286,
-        "y" : 342,
+        "x" : -740,
+        "y" : 284,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -159,10 +333,45 @@
           },
           "description" : ""
         }, {
-          "target" : "parsed_example",
+          "target" : "format",
           "expression" : {
             "format" : "python",
-            "expression" : "when(col('example').isNotNull(), to_timestamp(col('example'), '')).otherwise(col('example'))"
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "upper(col(\"format\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
           },
           "description" : ""
         } ]
@@ -172,10 +381,10 @@
       "id" : "3oMEQXpRlUPYO09XVKyKM",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "Reformat_2",
-        "slug" : "Reformat_2",
-        "x" : -56,
-        "y" : 333,
+        "label" : "ref",
+        "slug" : "ref",
+        "x" : -510,
+        "y" : 275,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -194,7 +403,57 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "expressions" : [ {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "i3iJfPpcB6bw5HeVlpBiu" : {
+      "id" : "i3iJfPpcB6bw5HeVlpBiu",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "bug",
+        "slug" : "bug",
+        "x" : -775,
+        "y" : 50,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Ww3MHJM5pX9ejyXAFj8uZ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "YlzXyFRVpjZGGHANu-QeC",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "parsed",
+          "expression" : {
+            "format" : "python",
+            "expression" : "when(col('example').isNotNull(), to_timestamp(col('example'), '')).otherwise(col('example'))"
+          },
+          "description" : ""
+        } ]
       }
     }
   },
