@@ -1,0 +1,256 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "838",
+    "frontEndLanguage" : "python",
+    "mode" : "batch",
+    "interimMode" : "Full",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "anshuman" : {
+          "type" : "record",
+          "fields" : [ ]
+        },
+        "anshuman2" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ]
+  },
+  "connections" : [ {
+    "id" : "0OWRngyVo164Ltx_53Ajl",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "5_CmxV8LOFjKCuJNoPnNK",
+    "targetPort" : "KCjiPz16kW0kNkAlRRFHR"
+  }, {
+    "id" : "8O7VR5WNraCU7vGxGjiL6",
+    "source" : "5_CmxV8LOFjKCuJNoPnNK",
+    "sourcePort" : "SkLcKNLgZdwaHvSKT-7dT",
+    "target" : "3oMEQXpRlUPYO09XVKyKM",
+    "targetPort" : "oE8C3IlWt2hCpASxqmt7F"
+  } ],
+  "processes" : {
+    "etKPPFcZI30YwU6FsoGD0" : {
+      "id" : "etKPPFcZI30YwU6FsoGD0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_1",
+        "slug" : "Source_1",
+        "x" : -458,
+        "y" : 348,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "KMshb-Ue3cKp-MihbcMkU",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "format",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "example",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "4483/datasets/timestamps"
+      }
+    },
+    "TCoizzqp21vgV4kif_tsZ" : {
+      "id" : "TCoizzqp21vgV4kif_tsZ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "Source_0",
+        "x" : -130,
+        "y" : 155,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "MSemxX0bgLN0zxG2CTOyw",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "490",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "491",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "2342374324123",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "12321",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "-3123.123",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "false",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "45734.345341",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "r#$%@#4!*&^()_=ASD~!245",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "2009-02-10",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "2009-04-11T10:20:44.000Z",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "datasetId" : "4483/datasets/all_types"
+      }
+    },
+    "5_CmxV8LOFjKCuJNoPnNK" : {
+      "id" : "5_CmxV8LOFjKCuJNoPnNK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -286,
+        "y" : 342,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KCjiPz16kW0kNkAlRRFHR",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "SkLcKNLgZdwaHvSKT-7dT",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "KCjiPz16kW0kNkAlRRFHR##example", "KCjiPz16kW0kNkAlRRFHR##format" ],
+        "expressions" : [ {
+          "target" : "format",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"format\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"example\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "parsed_example",
+          "expression" : {
+            "format" : "python",
+            "expression" : "when(col('example').isNotNull(), to_timestamp(col('example'), '')).otherwise(col('example'))"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "3oMEQXpRlUPYO09XVKyKM" : {
+      "id" : "3oMEQXpRlUPYO09XVKyKM",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : -56,
+        "y" : 333,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oE8C3IlWt2hCpASxqmt7F",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Zr5rGGxj3YouEhf0-Sa37",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ]
+  }
+}
