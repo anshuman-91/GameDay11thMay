@@ -39,6 +39,12 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-11 07:31:52'
+      gamedayfabric:
+        fabricId: 920
+        datasetType: File
+        description: ''
+        author: rajp@simpledatalabs.com
+        createdAt: '2022-05-11 10:08:54'
 jobs: {}
 libraries: []
 subgraphs: {}

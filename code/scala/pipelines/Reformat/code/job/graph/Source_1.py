@@ -5,11 +5,11 @@ from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
 def Source_1(spark: SparkSession) -> DataFrame:
-    if Config.fabricName == "anshuman2":
+    if Config.fabricName == "gamedayfabric":
         return spark.read\
-            .schema(StructType([StructField("format", StringType(), True), StructField("example", TimestampType(), True)]))\
+            .schema(StructType([StructField("format", StringType(), True), StructField("example", StringType(), True)]))\
             .option("header", True)\
             .option("sep", ",")\
-            .csv("dbfs:/Prophecy/anshuman@simpledatalabs.com/timestamps_csv.csv")
+            .csv("dbfs:/FileStore/data_engg/csv/timestamps_csv.csv")
     else:
         raise Exception("No valid dataset present to read fabric")
