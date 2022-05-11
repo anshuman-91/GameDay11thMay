@@ -76,6 +76,24 @@
     "sourcePort" : "QGIaxO4heuyzaQHe7DGeI",
     "target" : "DwRROmocQoCQGnpHNX2FZ",
     "targetPort" : "K3FKExJi7RzmQ8Y35slEx"
+  }, {
+    "id" : "F-Ft6Mdwy-K7Xqr5ize5y",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "DvxyIOr5de3VZg3e-EGmU",
+    "targetPort" : "4axn1XJumWDmgSKlo4r0Q"
+  }, {
+    "id" : "zk64IRyOUQIlRzVmcRPFZ",
+    "source" : "DvxyIOr5de3VZg3e-EGmU",
+    "sourcePort" : "-AubseQ6b87jCyNZFwdhg",
+    "target" : "K52_UZpSU0_6s0YwtKfpQ",
+    "targetPort" : "VBwqtgtmNvTuZLtsWabsu"
+  }, {
+    "id" : "7QSbeNLulK-Ik96Co26zJ",
+    "source" : "K52_UZpSU0_6s0YwtKfpQ",
+    "sourcePort" : "7WCUsqw9npMjE5ogeQKcb",
+    "target" : "ny_UXPMdX1JCe6S7g9TpU",
+    "targetPort" : "JvHxn-L4P3duumfI5lWtX"
   } ],
   "processes" : {
     "etKPPFcZI30YwU6FsoGD0" : {
@@ -117,6 +135,69 @@
         "datasetId" : "4483/datasets/timestamps"
       }
     },
+    "DvxyIOr5de3VZg3e-EGmU" : {
+      "id" : "DvxyIOr5de3VZg3e-EGmU",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -418,
+        "y" : 26,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4axn1XJumWDmgSKlo4r0Q",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "format",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "example",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "outputs" : [ {
+          "id" : "-AubseQ6b87jCyNZFwdhg",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "format",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "example",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "haha",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "script" : "import os \n# for root, dirs, files in os.walk(\".\", topdown=False):\n#    print('################################%%%%%%%%%%%%%%')\n#    for name in files:\n#       print(os.path.join(root, name))\n#    for name in dirs:\n#       print(os.path.join(root, name))\nout0=in0\nprint('################################%%%%%%%%%%%%%%')\nprint(os.walk(\"../../\"))\nprint(os.walk(\"/\"))\nout0 = out0.withColumn(\"haha\", lit(str([x for x in os.walk(\".\")])))\n\n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
     "B5vjpzwDzFMMCF-iCXZ0x" : {
       "id" : "B5vjpzwDzFMMCF-iCXZ0x",
       "component" : "Reformat",
@@ -144,6 +225,42 @@
       "properties" : {
         "columnsSelector" : [ ],
         "expressions" : [ ]
+      }
+    },
+    "K52_UZpSU0_6s0YwtKfpQ" : {
+      "id" : "K52_UZpSU0_6s0YwtKfpQ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : -251,
+        "y" : 23,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VBwqtgtmNvTuZLtsWabsu",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "7WCUsqw9npMjE5ogeQKcb",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "VBwqtgtmNvTuZLtsWabsu##haha" ],
+        "expressions" : [ {
+          "target" : "haha",
+          "expression" : {
+            "format" : "python",
+            "expression" : "array(col('haha'))"
+          },
+          "description" : ""
+        } ]
       }
     },
     "DwRROmocQoCQGnpHNX2FZ" : {
@@ -179,8 +296,8 @@
       "id" : "DHEK-OBQxFMefgpL0XdLG",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "Reformat_2",
-        "slug" : "Reformat_2",
+        "label" : "bug2",
+        "slug" : "bug2",
         "x" : -792,
         "y" : 444,
         "language" : "python",
@@ -267,31 +384,6 @@
         } ]
       }
     },
-    "TCoizzqp21vgV4kif_tsZ" : {
-      "id" : "TCoizzqp21vgV4kif_tsZ",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
-        "x" : -169,
-        "y" : -89,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "MSemxX0bgLN0zxG2CTOyw",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "datasetId" : "4483/datasets/all_types"
-      }
-    },
     "5_CmxV8LOFjKCuJNoPnNK" : {
       "id" : "5_CmxV8LOFjKCuJNoPnNK",
       "component" : "Reformat",
@@ -319,6 +411,34 @@
       "properties" : {
         "columnsSelector" : [ "KCjiPz16kW0kNkAlRRFHR##example", "KCjiPz16kW0kNkAlRRFHR##format" ],
         "expressions" : [ {
+          "target" : "how_big",
+          "expression" : {
+            "format" : "python",
+            "expression" : "when((length(col(\"format\")) > lit(17)), lit(\"big\")).otherwise(lit(\"small\")).alias(\"how big\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "f2",
+          "expression" : {
+            "format" : "python",
+            "expression" : "when(col(\"example\").isin(lit(\"aa\"), lit(\"2018-08-20'T'13:20:10*633+0000\")), lit(1111)).otherwise(lit(\"a\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "how_big2",
+          "expression" : {
+            "format" : "python",
+            "expression" : "when((length(col(\"format\")) > lit(18)), lit(\"big\")).otherwise(when((length(col(\"format\")) > lit(15)), lit(\"medium\")).otherwise(lit(\"small\"))).alias(\"how big\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "cast",
+          "expression" : {
+            "format" : "python",
+            "expression" : "to_timestamp(lit(\"06-24-2019 12:01:19.000\"), \"MM-dd-yyyy HH:mm:ss.SSSS\")"
+          },
+          "description" : ""
+        }, {
           "target" : "format",
           "expression" : {
             "format" : "python",
@@ -333,48 +453,42 @@
           },
           "description" : ""
         }, {
-          "target" : "format",
+          "target" : "cast2",
           "expression" : {
             "format" : "python",
-            "expression" : "col(\"format\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "example",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"example\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "format",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"format\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "example",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"example\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "format",
-          "expression" : {
-            "format" : "python",
-            "expression" : "upper(col(\"format\"))"
-          },
-          "description" : ""
-        }, {
-          "target" : "example",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"example\")"
+            "expression" : "to_timestamp(lit('23 Apr 2017 10:32:35*311'), 'dd MMM yyyy HH:mm:ss*SSS')"
           },
           "description" : ""
         } ]
+      }
+    },
+    "ny_UXPMdX1JCe6S7g9TpU" : {
+      "id" : "ny_UXPMdX1JCe6S7g9TpU",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_5",
+        "slug" : "Reformat_5",
+        "x" : -84,
+        "y" : 70,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JvHxn-L4P3duumfI5lWtX",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "9-km1AtkYBdUY2GLKn2Yw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
       }
     },
     "3oMEQXpRlUPYO09XVKyKM" : {
@@ -450,7 +564,7 @@
           "target" : "parsed",
           "expression" : {
             "format" : "python",
-            "expression" : "when(col('example').isNotNull(), to_timestamp(col('example'), '')).otherwise(col('example'))"
+            "expression" : "lit(\"''when(col('example').isNotNull(), to_timestamp(col('example'), '')).otherwise(col('example'))''\")"
           },
           "description" : ""
         } ]
