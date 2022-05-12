@@ -1,0 +1,80 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: '    col1'
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col2
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col3
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col4
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col5
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col6
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col7
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col8
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col9
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col10
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col11
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col12
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col13
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col14
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col15
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col16
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col17
+    type: string
+    nullable: true
+    metadata: {}
+  - name: col18
+    type: string
+    nullable: true
+    metadata: {}
+  - name: ' col19_'
+    type: string
+    nullable: true
+    metadata: {}

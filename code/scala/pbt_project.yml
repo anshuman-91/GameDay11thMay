@@ -14,6 +14,17 @@ pipelines:
       inputs: []
       outputs: []
     dependencies: {}
+  pipelines/Reformat2:
+    name: 1_csv.-
+    description: null
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-12 09:21:53'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
 datasets:
   datasets/all_types:
     name: all_types
@@ -51,6 +62,24 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-11 09:57:39'
+  datasets/malformed_csv:
+    name: malformed_csv
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-12 09:22:59'
+    physicalDatasets:
+      anshuman:
+        fabricId: 811
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-12 09:22:59'
+      gamedayfabric:
+        fabricId: 920
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-12 09:23:04'
 jobs: {}
 libraries: []
 subgraphs: {}
