@@ -1,0 +1,28 @@
+{
+  "name" : "K52_UZpSU0_6s0YwtKfpQ",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "haha",
+      "exprId" : 1101
+    } ],
+    "destination" : {
+      "port" : "7WCUsqw9npMjE5ogeQKcb",
+      "name" : "haha",
+      "exprId" : 1101
+    }
+  }, {
+    "sources" : [ {
+      "port" : "VBwqtgtmNvTuZLtsWabsu",
+      "name" : "haha",
+      "exprId" : 1013
+    } ],
+    "destination" : {
+      "port" : "",
+      "name" : "haha",
+      "exprId" : 1101
+    },
+    "transformation" : "explode(split(haha, ',', -1))"
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "name" : "i3iJfPpcB6bw5HeVlpBiu",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "YlzXyFRVpjZGGHANu-QeC",
+      "name" : "parsed",
+      "exprId" : 1123
+    },
+    "transformation" : "'\\'\\'when(col(\\'example\\').isNotNull(), to_timestamp(col(\\'example\\'), \\'\\')).otherwise(col(\\'example\\'))\\'\\''"
+  } ]
+}

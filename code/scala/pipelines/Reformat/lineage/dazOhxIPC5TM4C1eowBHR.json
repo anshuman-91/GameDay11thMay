@@ -1,0 +1,36 @@
+{
+  "name" : "dazOhxIPC5TM4C1eowBHR",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "TDwzQ0exEboGwUlggtDuV",
+      "name" : "format",
+      "exprId" : 1203
+    } ],
+    "destination" : {
+      "port" : "mkBFk5vUBJvcsy5qsBSAf",
+      "name" : "x",
+      "exprId" : 1340
+    },
+    "transformation" : "regexp_replace(format, 'yyyy', 'YYYY', 1)"
+  }, {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "mkBFk5vUBJvcsy5qsBSAf",
+      "name" : "y",
+      "exprId" : 1341
+    },
+    "transformation" : "'rank().over(Window.partitionBy(\\'example\\').orderBy(\\'format\\'))'"
+  }, {
+    "sources" : [ {
+      "port" : "TDwzQ0exEboGwUlggtDuV",
+      "name" : "format",
+      "exprId" : 1203
+    } ],
+    "destination" : {
+      "port" : "mkBFk5vUBJvcsy5qsBSAf",
+      "name" : "z",
+      "exprId" : 1343
+    }
+  } ]
+}

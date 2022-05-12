@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def Reformat_2(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(explode(split(col("haha"), ",")).alias("haha"))
+def Reformat_6(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0

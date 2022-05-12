@@ -1,0 +1,13 @@
+{
+  "name" : "Vgur4wOAq5TRzJ3eKUQkA",
+  "component" : "Aggregate",
+  "transformations" : [ {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "3N4hw-1nDY4hHLIYzF3Wb",
+      "name" : "c",
+      "exprId" : 1336
+    },
+    "transformation" : "count(1)"
+  } ]
+}

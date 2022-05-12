@@ -1,0 +1,79 @@
+{
+  "name" : "5_CmxV8LOFjKCuJNoPnNK",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "KCjiPz16kW0kNkAlRRFHR",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "how_big",
+      "exprId" : 1077
+    },
+    "transformation" : "CASE WHEN (length(format) > 17) THEN 'big' ELSE 'small' END"
+  }, {
+    "sources" : [ {
+      "port" : "KCjiPz16kW0kNkAlRRFHR",
+      "name" : "example",
+      "exprId" : 1010
+    } ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "f2",
+      "exprId" : 1078
+    },
+    "transformation" : "CASE WHEN (example IN ('aa', '2018-08-20\\'T\\'13:20:10*633+0000')) THEN CAST(1111 AS STRING) ELSE 'a' END"
+  }, {
+    "sources" : [ {
+      "port" : "KCjiPz16kW0kNkAlRRFHR",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "how_big2",
+      "exprId" : 1080
+    },
+    "transformation" : "CASE WHEN (length(format) > 18) THEN 'big' ELSE CASE WHEN (length(format) > 15) THEN 'medium' ELSE 'small' END END"
+  }, {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "cast",
+      "exprId" : 1081
+    },
+    "transformation" : "to_timestamp('06-24-2019 12:01:19.000', 'MM-dd-yyyy HH:mm:ss.SSSS')"
+  }, {
+    "sources" : [ {
+      "port" : "KCjiPz16kW0kNkAlRRFHR",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "format",
+      "exprId" : 1082
+    }
+  }, {
+    "sources" : [ {
+      "port" : "KCjiPz16kW0kNkAlRRFHR",
+      "name" : "example",
+      "exprId" : 1010
+    } ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "example",
+      "exprId" : 1083
+    }
+  }, {
+    "sources" : [ ],
+    "destination" : {
+      "port" : "SkLcKNLgZdwaHvSKT-7dT",
+      "name" : "cast2",
+      "exprId" : 1084
+    },
+    "transformation" : "to_timestamp('23 Apr 2017 10:32:35*311', 'dd MMM yyyy HH:mm:ss*SSS')"
+  } ]
+}

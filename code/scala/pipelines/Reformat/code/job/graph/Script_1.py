@@ -18,6 +18,10 @@ def Script_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     )
     print(os.walk("../../"))
     print(os.walk("/"))
+    print("$$$$$$$$$$$$$$$$$$$")
+    os.system("dbfs ls dbfs:/FileStore/")
+    os.system("ls /dbfs/FileStore/data_engg/")
+    print("$$$$$$$$$$$$$$$$$$$")
     out0 = out0.withColumn("haha", lit(str([x for x in os.walk(".")])))
 
     return out0

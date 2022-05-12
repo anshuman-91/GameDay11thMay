@@ -89,21 +89,75 @@
     "target" : "K52_UZpSU0_6s0YwtKfpQ",
     "targetPort" : "VBwqtgtmNvTuZLtsWabsu"
   }, {
-    "id" : "7QSbeNLulK-Ik96Co26zJ",
-    "source" : "K52_UZpSU0_6s0YwtKfpQ",
-    "sourcePort" : "7WCUsqw9npMjE5ogeQKcb",
-    "target" : "ny_UXPMdX1JCe6S7g9TpU",
-    "targetPort" : "JvHxn-L4P3duumfI5lWtX"
+    "id" : "88aaEd_jQmgDyyd241hWM",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "yEyq1zIo6rd-8MouCCjWT",
+    "targetPort" : "nTWBfxA-QXZQcgJDjWejm"
+  }, {
+    "id" : "_CSutnd5BiskV6lh2-ypP",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "Vgur4wOAq5TRzJ3eKUQkA",
+    "targetPort" : "7aOkVISsdWzghs4cY9bra"
+  }, {
+    "id" : "edH6rrRyHcQF8E4eMrGUj",
+    "source" : "Vgur4wOAq5TRzJ3eKUQkA",
+    "sourcePort" : "3N4hw-1nDY4hHLIYzF3Wb",
+    "target" : "Z42LQX6Oip6HhQmTh3n5B",
+    "targetPort" : "G7WqJAnDHABQc4T7jMSaa"
+  }, {
+    "id" : "khJ1E8xjtCMVNbx3vpoOt",
+    "source" : "etKPPFcZI30YwU6FsoGD0",
+    "sourcePort" : "KMshb-Ue3cKp-MihbcMkU",
+    "target" : "dazOhxIPC5TM4C1eowBHR",
+    "targetPort" : "TDwzQ0exEboGwUlggtDuV"
+  }, {
+    "id" : "1Axi-uO4q8Fjza0l8LQNd",
+    "source" : "dazOhxIPC5TM4C1eowBHR",
+    "sourcePort" : "mkBFk5vUBJvcsy5qsBSAf",
+    "target" : "STzVEVeMd45S5DHok1LLP",
+    "targetPort" : "WS8ciLHki1jvBxT46gYkS"
   } ],
   "processes" : {
+    "yEyq1zIo6rd-8MouCCjWT" : {
+      "id" : "yEyq1zIo6rd-8MouCCjWT",
+      "component" : "FileOps",
+      "metadata" : {
+        "label" : "FileOps_1",
+        "slug" : "FileOps_1",
+        "x" : -497,
+        "y" : -93,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nTWBfxA-QXZQcgJDjWejm",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "iurBXVmaEx0gS4Qdyw536",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "operation" : "copy",
+        "source" : "/dbfs/FileStore/data_engg/csv/timestamps_csv.csv",
+        "destination" : "/dbfs/Prophecy/anshuman@simpledatalabs.com/gem_test.csv"
+      }
+    },
     "etKPPFcZI30YwU6FsoGD0" : {
       "id" : "etKPPFcZI30YwU6FsoGD0",
       "component" : "Source",
       "metadata" : {
         "label" : "Source_1",
         "slug" : "Source_1",
-        "x" : -974,
-        "y" : 264,
+        "x" : -1432,
+        "y" : 154,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
@@ -113,26 +167,41 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "KMshb-Ue3cKp-MihbcMkU",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "format",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "example",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ]
       },
       "properties" : {
         "datasetId" : "4483/datasets/timestamps"
+      }
+    },
+    "STzVEVeMd45S5DHok1LLP" : {
+      "id" : "STzVEVeMd45S5DHok1LLP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_5",
+        "slug" : "Reformat_5",
+        "x" : -98,
+        "y" : 153,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WS8ciLHki1jvBxT46gYkS",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "r_253yN9-X9xpP9ig23xK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
       }
     },
     "DvxyIOr5de3VZg3e-EGmU" : {
@@ -151,51 +220,47 @@
       "ports" : {
         "inputs" : [ {
           "id" : "4axn1XJumWDmgSKlo4r0Q",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "format",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "example",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "-AubseQ6b87jCyNZFwdhg",
-          "slug" : "out0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "format",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "example",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : { }
-            }, {
-              "name" : "haha",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : { }
-            } ]
-          }
+          "slug" : "out0"
         } ],
         "selectedInputFields" : [ ]
       },
       "properties" : {
-        "script" : "import os \n# for root, dirs, files in os.walk(\".\", topdown=False):\n#    print('################################%%%%%%%%%%%%%%')\n#    for name in files:\n#       print(os.path.join(root, name))\n#    for name in dirs:\n#       print(os.path.join(root, name))\nout0=in0\nprint('################################%%%%%%%%%%%%%%')\nprint(os.walk(\"../../\"))\nprint(os.walk(\"/\"))\nout0 = out0.withColumn(\"haha\", lit(str([x for x in os.walk(\".\")])))\n\n",
+        "script" : "import os \n# for root, dirs, files in os.walk(\".\", topdown=False):\n#    print('################################%%%%%%%%%%%%%%')\n#    for name in files:\n#       print(os.path.join(root, name))\n#    for name in dirs:\n#       print(os.path.join(root, name))\nout0=in0\nprint('################################%%%%%%%%%%%%%%')\nprint(os.walk(\"../../\"))\nprint(os.walk(\"/\"))\nprint(\"$$$$$$$$$$$$$$$$$$$\")\nos.system(\"dbfs ls dbfs:/FileStore/\")\nos.system(\"ls /dbfs/FileStore/data_engg/\")\nprint(\"$$$$$$$$$$$$$$$$$$$\")\n\nout0 = out0.withColumn(\"haha\", lit(str([x for x in os.walk(\".\")])))\n\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "Z42LQX6Oip6HhQmTh3n5B" : {
+      "id" : "Z42LQX6Oip6HhQmTh3n5B",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_6",
+        "slug" : "Reformat_6",
+        "x" : -846,
+        "y" : -137,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "G7WqJAnDHABQc4T7jMSaa",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "OIxErv3fDIYagXpk9OuuL",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
       }
     },
     "B5vjpzwDzFMMCF-iCXZ0x" : {
@@ -225,6 +290,56 @@
       "properties" : {
         "columnsSelector" : [ ],
         "expressions" : [ ]
+      }
+    },
+    "dazOhxIPC5TM4C1eowBHR" : {
+      "id" : "dazOhxIPC5TM4C1eowBHR",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "rank",
+        "slug" : "rank",
+        "x" : -277,
+        "y" : 145,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TDwzQ0exEboGwUlggtDuV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "mkBFk5vUBJvcsy5qsBSAf",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "TDwzQ0exEboGwUlggtDuV##format" ],
+        "expressions" : [ {
+          "target" : "x",
+          "expression" : {
+            "format" : "python",
+            "expression" : "regexp_replace(col('format'),\"yyyy\",\"YYYY\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "y",
+          "expression" : {
+            "format" : "python",
+            "expression" : "lit(\"rank().over(Window.partitionBy('example').orderBy('format'))\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "z",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col('format').alias('cc')"
+          },
+          "description" : ""
+        } ]
       }
     },
     "K52_UZpSU0_6s0YwtKfpQ" : {
@@ -257,7 +372,7 @@
           "target" : "haha",
           "expression" : {
             "format" : "python",
-            "expression" : "array(col('haha'))"
+            "expression" : "explode(split(col(\"haha\"), \",\"))"
           },
           "description" : ""
         } ]
@@ -290,6 +405,48 @@
       "properties" : {
         "columnsSelector" : [ ],
         "expressions" : [ ]
+      }
+    },
+    "Vgur4wOAq5TRzJ3eKUQkA" : {
+      "id" : "Vgur4wOAq5TRzJ3eKUQkA",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Aggregate_1",
+        "slug" : "Aggregate_1",
+        "x" : -1119,
+        "y" : -131,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7aOkVISsdWzghs4cY9bra",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "3N4hw-1nDY4hHLIYzF3Wb",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "c",
+          "expression" : {
+            "format" : "python",
+            "expression" : "count(lit(1))"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ ]
       }
     },
     "DHEK-OBQxFMefgpL0XdLG" : {
@@ -456,39 +613,10 @@
           "target" : "cast2",
           "expression" : {
             "format" : "python",
-            "expression" : "to_timestamp(lit('23 Apr 2017 10:32:35*311'), 'dd MMM yyyy HH:mm:ss*SSS')"
+            "expression" : "to_timestamp(lit(\"23 Apr 2017 10:32:35*311\"), \"dd MMM yyyy HH:mm:ss*SSS\")"
           },
           "description" : ""
         } ]
-      }
-    },
-    "ny_UXPMdX1JCe6S7g9TpU" : {
-      "id" : "ny_UXPMdX1JCe6S7g9TpU",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_5",
-        "slug" : "Reformat_5",
-        "x" : -84,
-        "y" : 70,
-        "language" : "python",
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "JvHxn-L4P3duumfI5lWtX",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "9-km1AtkYBdUY2GLKn2Yw",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ]
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
       }
     },
     "3oMEQXpRlUPYO09XVKyKM" : {
@@ -540,8 +668,8 @@
       "metadata" : {
         "label" : "bug",
         "slug" : "bug",
-        "x" : -775,
-        "y" : 50,
+        "x" : -740,
+        "y" : -85,
         "language" : "python",
         "phase" : 0,
         "cache" : false,

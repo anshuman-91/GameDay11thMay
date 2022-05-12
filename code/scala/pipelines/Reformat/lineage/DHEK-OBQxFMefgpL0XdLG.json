@@ -1,0 +1,105 @@
+{
+  "name" : "DHEK-OBQxFMefgpL0XdLG",
+  "component" : "Reformat",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1104
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1105
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1106
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "example",
+      "exprId" : 1010
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "example",
+      "exprId" : 1107
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1108
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1109
+    },
+    "transformation" : "upper(format)"
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1110
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "format",
+      "exprId" : 1009
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "format",
+      "exprId" : 1111
+    }
+  }, {
+    "sources" : [ {
+      "port" : "ejh84OO1ukMn7BfjFGiaO",
+      "name" : "example",
+      "exprId" : 1010
+    } ],
+    "destination" : {
+      "port" : "QGIaxO4heuyzaQHe7DGeI",
+      "name" : "example",
+      "exprId" : 1112
+    }
+  } ]
+}
