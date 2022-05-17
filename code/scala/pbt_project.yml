@@ -1,6 +1,6 @@
 name: GameDay11thMay
 description: ''
-version: 0.0.1
+version: '1.01'
 author: anshuman@simpledatalabs.com
 pipelines:
   pipelines/gamedaytest:
@@ -16,7 +16,7 @@ pipelines:
     dependencies: {}
   pipelines/interimtest:
     name: interimtest
-    description: null
+    description: ''
     author: rajp@simpledatalabs.com
     mode: batch
     language: python
@@ -49,7 +49,8 @@ jobs:
     name: testscheduler
     description: ''
     fabricUID: null
-    scheduler: null
+    scheduler:
+      Airflow: {}
     jobSize: Small
     scheduleCron: 0 0 0 1/1 * ? *
     timeout: null
