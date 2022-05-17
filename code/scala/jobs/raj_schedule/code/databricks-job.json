@@ -1,0 +1,91 @@
+{
+  "fabricId" : "920",
+  "components" : [ {
+    "PipelineComponent" : {
+      "id" : "4483/pipelines/gamedaytest",
+      "nodeName" : "gamedaytest",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/1652789175397/4483/gamedaytest-1.0-py3-none-any.whl",
+      "language" : "python"
+    }
+  }, {
+    "ScriptComponent" : {
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/scripts/latest/4483/raj_schedule/Script_1--342935075.py",
+      "nodeName" : "Script_1",
+      "id" : "f3D1XRy9uO54JPbtU4mLp",
+      "language" : "python",
+      "content" : "print(\"Job Succeeded\")"
+    }
+  } ],
+  "request" : {
+    "CreateNewJobRequest" : {
+      "format" : "MULTI_TASK",
+      "name" : "raj_schedule",
+      "jobClusters" : [ {
+        "job_cluster_key" : "small-109548807",
+        "new_cluster" : {
+          "spark_version" : "9.1.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge",
+          "enable_elastic_disk" : false
+        }
+      } ],
+      "emailNotifications" : {
+        "on_start" : [ "rajp@simpledatalabs.com" ],
+        "on_success" : [ "rajp@simpledatalabs.com" ],
+        "on_failure" : [ "rajp@simpledatalabs.com" ]
+      },
+      "maxConcurrentRuns" : 1,
+      "tasks" : [ {
+        "task_key" : "gamedaytest",
+        "new_cluster" : {
+          "spark_version" : "9.1.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge",
+          "enable_elastic_disk" : false
+        },
+        "python_wheel_task" : {
+          "package_name" : "gamedaytest",
+          "entry_point" : "main",
+          "parameters" : [ "-C", "fabricName=gamedayfabric" ]
+        },
+        "libraries" : [ {
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/1652789175397/4483/gamedaytest-1.0-py3-none-any.whl"
+        } ],
+        "email_notifications" : {
+          "on_start" : [ "rajp@simpledatalabs.com" ],
+          "on_success" : [ "rajp@simpledatalabs.com" ],
+          "on_failure" : [ "rajp@simpledatalabs.com" ]
+        },
+        "max_retries" : 1
+      }, {
+        "task_key" : "Script_1",
+        "depends_on" : [ {
+          "task_key" : "gamedaytest"
+        } ],
+        "new_cluster" : {
+          "spark_version" : "9.1.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge",
+          "enable_elastic_disk" : false
+        },
+        "spark_python_task" : {
+          "python_file" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/scripts/latest/4483/raj_schedule/Script_1--342935075.py"
+        },
+        "email_notifications" : {
+          "on_start" : [ "rajp@simpledatalabs.com" ],
+          "on_success" : [ "rajp@simpledatalabs.com" ],
+          "on_failure" : [ "rajp@simpledatalabs.com" ]
+        },
+        "max_retries" : 1
+      } ],
+      "schedule" : {
+        "quartz_cron_expression" : "0 0 0 1/1 * ? *",
+        "timezone_id" : "GMT",
+        "pause_status" : "PAUSED"
+      }
+    }
+  }
+}
