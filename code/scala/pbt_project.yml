@@ -1,6 +1,6 @@
 name: GameDay11thMay
 description: ''
-version: '1.01'
+version: '1.02'
 author: anshuman@simpledatalabs.com
 pipelines:
   pipelines/gamedaytest:

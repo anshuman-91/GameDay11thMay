@@ -3,3 +3,7 @@
 *** Release notes for version: 1.01 ***
 
 Changes
+
+*** Release notes for version: 1.02 ***
+
+NEwChanges
