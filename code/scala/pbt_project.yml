@@ -2,6 +2,7 @@ name: GameDay11thMay
 description: ''
 version: 0.0.1-SNAPSHOT
 author: anshuman@simpledatalabs.com
+language: scala
 pipelines:
   pipelines/Reformat:
     name: Reformat
@@ -16,13 +17,25 @@ pipelines:
     dependencies: {}
   pipelines/Reformat2:
     name: 1_csv.-
-    description: null
+    description: ''
     author: anshuman@simpledatalabs.com
     mode: batch
     language: python
     createdAt: '2022-05-12 09:21:53'
     datasets:
       inputs: []
+      outputs: []
+    dependencies: {}
+  pipelines/dedup:
+    name: dedup
+    description: ''
+    author: anshuman@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-12 10:22:43'
+    datasets:
+      inputs:
+      - 4483/datasets/all_types
       outputs: []
     dependencies: {}
 datasets:
@@ -44,6 +57,12 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-11 09:57:39'
+      anshuman:
+        fabricId: 811
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-12 10:22:55'
   datasets/timestamps:
     name: timestamps
     description: ''
@@ -80,6 +99,12 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-12 09:23:04'
+      anshuman2:
+        fabricId: 838
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-12 10:12:53'
 jobs: {}
 libraries: []
 subgraphs: {}

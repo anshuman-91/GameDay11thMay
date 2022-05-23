@@ -55,8 +55,8 @@
       "metadata" : {
         "label" : "csv_malformed",
         "slug" : "csv_malformed",
-        "x" : -2872,
-        "y" : -845,
+        "x" : -3880,
+        "y" : -1106,
         "language" : "python",
         "phase" : 0,
         "cache" : false,
