@@ -1,16 +1,27 @@
 name: GameDay11thMay
 description: ''
-version: 0.0.1-SNAPSHOT
+version: '2.0102'
 author: anshuman@simpledatalabs.com
 language: scala
 pipelines:
-  pipelines/Reformat:
-    name: Reformat
+  pipelines/gamedaytest:
+    name: gamedaytest
     description: ''
-    author: anshuman@simpledatalabs.com
+    author: rajp@simpledatalabs.com
     mode: batch
     language: python
-    createdAt: '2022-05-11 06:53:24'
+    createdAt: '2022-05-11 12:27:18'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+  pipelines/interimtest:
+    name: interimtest
+    description: ''
+    author: rajp@simpledatalabs.com
+    mode: batch
+    language: python
+    createdAt: '2022-05-16 12:50:31'
     datasets:
       inputs: []
       outputs: []
@@ -39,18 +50,12 @@ pipelines:
       outputs: []
     dependencies: {}
 datasets:
-  datasets/all_types:
-    name: all_types
+  datasets/device:
+    name: device
     description: ''
-    author: anshuman@simpledatalabs.com
-    createdAt: '2022-05-11 07:04:45'
+    author: rajp@simpledatalabs.com
+    createdAt: '2022-05-11 12:35:29'
     physicalDatasets:
-      anshuman2:
-        fabricId: 838
-        datasetType: File
-        description: ''
-        author: anshuman@simpledatalabs.com
-        createdAt: '2022-05-11 07:04:45'
       gamedayfabric:
         fabricId: 920
         datasetType: File
@@ -105,7 +110,64 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-12 10:12:53'
-jobs: {}
+jobs:
+  jobs/testscheduler:
+    name: testscheduler
+    description: ''
+    fabricUID: null
+    scheduler:
+      Airflow: {}
+    jobSize: Small
+    scheduleCron: 0 0 0 1/1 * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - 4483/pipelines/gamedaytest
+    enabled: true
+    createdAt: '2022-05-17 10:22:35'
+    author: rajp@simpledatalabs.com
+  jobs/raj_schedule:
+    name: raj_schedule
+    description: ''
+    fabricUID: 920
+    scheduler:
+      Databricks: {}
+    jobSize: small
+    scheduleCron: 0 0 0 1/1 * ? *
+    timeout: null
+    alerting:
+      emails: rajp@simpledatalabs.com
+      onStart: true
+      onSuccess: true
+      onFailure: true
+    pipelines:
+    - 4483/pipelines/gamedaytest
+    enabled: false
+    createdAt: '2022-05-17 10:51:14'
+    author: rajp@simpledatalabs.com
+  jobs/rishul_test_schedule:
+    name: rishul_test_schedule
+    description: ''
+    fabricUID: 920
+    scheduler:
+      Databricks: {}
+    jobSize: small
+    scheduleCron: 0 0/1 * * * ?
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - 4483/pipelines/gamedaytest
+    enabled: true
+    createdAt: '2022-05-17 12:08:08'
+    author: rajp@simpledatalabs.com
 libraries: []
 subgraphs: {}
 dependencies: []

@@ -1,0 +1,37 @@
+{
+  "id" : "n5nivKErb2an7LEBeAt9g$$WGxFYA0-3KD13Vzaertc6",
+  "name" : "n5nivKErb2an7LEBeAt9g$$WGxFYA0-3KD13Vzaertc6",
+  "component" : "SetOperation",
+  "transformations" : [ ],
+  "inputs" : {
+    "GXtTPRB1WdjrZnJIP4ZXN$$S0gBFAFjKbdmp20FOn7tV" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1488
+      }, {
+        "name" : "device",
+        "exprId" : 1489
+      } ]
+    },
+    "N185AjeGhdAqvaXFXv6kt$$e9NPNMPTHWvnYpmBLaX3Q" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1492
+      }, {
+        "name" : "device",
+        "exprId" : 1493
+      } ]
+    }
+  },
+  "outputs" : {
+    "h1i22L0tZpA8nk0pso-Dm$$ef58k6-cIpwQEUvZm2bX0" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1488
+      }, {
+        "name" : "device",
+        "exprId" : 1489
+      } ]
+    }
+  }
+}

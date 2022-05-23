@@ -1,0 +1,31 @@
+{
+  "id" : "wEy9fEkZzRrh5N_L0rZrU$$cS42aIvsO69tYrPZqu4Wj",
+  "name" : "wEy9fEkZzRrh5N_L0rZrU$$cS42aIvsO69tYrPZqu4Wj",
+  "component" : "Filter",
+  "transformations" : [ {
+    "sources" : [ ],
+    "transformation" : "Filter(true)"
+  } ],
+  "inputs" : {
+    "zatqS7fcaGDrJzZjgdYql$$XohTaSey6MX0TyMzLREt3" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1418
+      }, {
+        "name" : "device",
+        "exprId" : 1419
+      } ]
+    }
+  },
+  "outputs" : {
+    "gB_KmWbkfD6Njjj0jDR8G$$84HhHLU96UfrUrvyFxjtk" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1418
+      }, {
+        "name" : "device",
+        "exprId" : 1419
+      } ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id" : "0oI9JGvZ4l871zr1J4U7J$$myrc9pW5Cu599JvRgN67W",
+  "name" : "0oI9JGvZ4l871zr1J4U7J$$myrc9pW5Cu599JvRgN67W",
+  "component" : "Source",
+  "transformations" : [ {
+    "sources" : [ {
+      "port" : "",
+      "name" : "id",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "mOG_RiqGAFRe-84nvltZy$$t9JbwwIKLoK1KQ0GGLIzJ",
+      "name" : "id",
+      "exprId" : 1
+    }
+  }, {
+    "sources" : [ {
+      "port" : "",
+      "name" : "device",
+      "exprId" : -1
+    } ],
+    "destination" : {
+      "port" : "mOG_RiqGAFRe-84nvltZy$$t9JbwwIKLoK1KQ0GGLIzJ",
+      "name" : "device",
+      "exprId" : 2
+    }
+  } ],
+  "inputs" : { },
+  "outputs" : {
+    "mOG_RiqGAFRe-84nvltZy$$t9JbwwIKLoK1KQ0GGLIzJ" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1
+      }, {
+        "name" : "device",
+        "exprId" : 2
+      } ]
+    }
+  }
+}

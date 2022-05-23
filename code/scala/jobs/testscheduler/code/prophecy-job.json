@@ -1,0 +1,61 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "146",
+    "name" : "testscheduler",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "enabled" : true,
+    "defaultClusterSize" : "Small",
+    "availableClusterSizes" : [ "Small", "small", "small", "small", "small", "small", "small" ],
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 1,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    }
+  },
+  "processes" : {
+    "O8o1-Tch3NWEB5OR7q3HK" : {
+      "id" : "O8o1-Tch3NWEB5OR7q3HK",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline",
+        "x" : 346,
+        "y" : 148
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cdOzFQR8AR43kGGiYOXfw"
+        } ],
+        "outputs" : [ {
+          "id" : "wV-yjSOLrBR3GNtGcmvyE"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "4483/pipelines/gamedaytest",
+        "configurations" : [ ]
+      }
+    }
+  },
+  "connections" : [ ]
+}

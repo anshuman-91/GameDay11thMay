@@ -1,0 +1,28 @@
+{
+  "id" : "C8QhcnPYzKONy7ZuVmQju$$yFzmzQXI7ZLlpVvA3gY-L",
+  "name" : "C8QhcnPYzKONy7ZuVmQju$$yFzmzQXI7ZLlpVvA3gY-L",
+  "component" : "Reformat",
+  "transformations" : [ ],
+  "inputs" : {
+    "yuAJlACioIGlxwedcAPTS$$rHrHN8fe8GxVT-GU-xPA1" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1392
+      }, {
+        "name" : "device",
+        "exprId" : 1393
+      } ]
+    }
+  },
+  "outputs" : {
+    "8djZicxJKLbJ4AmUatS__$$lA2dNJS31jFkkwCQ0qEBn" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1392
+      }, {
+        "name" : "device",
+        "exprId" : 1393
+      } ]
+    }
+  }
+}

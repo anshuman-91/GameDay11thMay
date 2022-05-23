@@ -1,0 +1,31 @@
+{
+  "id" : "E85Ffm_w4uKyxoaCceQrR$$qnuc5g9b3S8u-CausZt6S",
+  "name" : "E85Ffm_w4uKyxoaCceQrR$$qnuc5g9b3S8u-CausZt6S",
+  "component" : "Filter",
+  "transformations" : [ {
+    "sources" : [ ],
+    "transformation" : "Filter((cast(id#1404 as int) > 15))"
+  } ],
+  "inputs" : {
+    "M8PqK_r6t2a824x35X0DJ$$2NjXcBe_acppGmHMR9tBb" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1404
+      }, {
+        "name" : "device",
+        "exprId" : 1405
+      } ]
+    }
+  },
+  "outputs" : {
+    "3oRLVSjZjggFd9MHQ3KNO$$R67ipcNSG1y4aIuF6tWs3" : {
+      "columns" : [ {
+        "name" : "id",
+        "exprId" : 1404
+      }, {
+        "name" : "device",
+        "exprId" : 1405
+      } ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "920",
+    "name" : "raj_schedule",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "availableClusterSizes" : [ "small" ],
+    "alerting" : {
+      "emails" : "rajp@simpledatalabs.com",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 1,
+      "alerting" : {
+        "emails" : "rajp@simpledatalabs.com",
+        "onStart" : true,
+        "onSuccess" : true,
+        "onFailure" : true
+      }
+    }
+  },
+  "processes" : {
+    "f3D1XRy9uO54JPbtU4mLp" : {
+      "id" : "f3D1XRy9uO54JPbtU4mLp",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script",
+        "x" : 289,
+        "y" : 104.5
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FbRLrVeEszuaFb78GwCru"
+        } ],
+        "outputs" : [ {
+          "id" : "-iIL0rZdJAZVpSksAWs3m"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "code" : "print(\"Job Succeeded\")"
+      }
+    },
+    "6m17hHEemeJBhRC_jXaAN" : {
+      "id" : "6m17hHEemeJBhRC_jXaAN",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "gamedaytest",
+        "slug" : "gamedaytest",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "out"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "4483/pipelines/gamedaytest",
+        "configurations" : [ ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ZZYqaJcMgm2b6hGktpSUT",
+    "source" : "6m17hHEemeJBhRC_jXaAN",
+    "target" : "f3D1XRy9uO54JPbtU4mLp",
+    "sourcePort" : "out",
+    "targetPort" : "FbRLrVeEszuaFb78GwCru"
+  } ]
+}

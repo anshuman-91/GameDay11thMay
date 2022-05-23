@@ -1,0 +1,171 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "920",
+    "name" : "rishul_test_schedule",
+    "schedule" : "0 0/1 * * * ?",
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "availableClusterSizes" : [ "small" ],
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 1,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    }
+  },
+  "processes" : {
+    "nNKD4nuKUHjjFCmVjrkhQ" : {
+      "id" : "nNKD4nuKUHjjFCmVjrkhQ",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "gamedaytest111",
+        "slug" : "gamedaytest111",
+        "x" : -342,
+        "y" : 40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "out"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "4483/pipelines/gamedaytest",
+        "configurations" : [ ]
+      }
+    },
+    "LkUGEtz8J3-JOOKBM-CwX" : {
+      "id" : "LkUGEtz8J3-JOOKBM-CwX",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script",
+        "x" : 255,
+        "y" : 11
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZG_4CSNkNpcO_LLaBLV0y"
+        } ],
+        "outputs" : [ {
+          "id" : "KiWiJX-84k064duf8aZqt"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "code" : "def print():\n    print(\"hello world!!\")\n    x = 10/0"
+      }
+    },
+    "3oLleXS1FQYX5SZcubz9L" : {
+      "id" : "3oLleXS1FQYX5SZcubz9L",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "secondone",
+        "slug" : "secondone",
+        "x" : -137,
+        "y" : 12
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3R00T1s_d-NhI2b7Noo60"
+        } ],
+        "outputs" : [ {
+          "id" : "6C2l93jlR808swExEV-xD"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "4483/pipelines/gamedaytest",
+        "configurations" : [ ]
+      }
+    },
+    "BsAlJiNmF5ASVltmg8CSB" : {
+      "id" : "BsAlJiNmF5ASVltmg8CSB",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_2",
+        "slug" : "Pipeline",
+        "x" : 64,
+        "y" : 30
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-Aro2e9_29lkBXsD2g0UW"
+        } ],
+        "outputs" : [ {
+          "id" : "PB-sgEd6BX-X3tM2yGtO8"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "4483/pipelines/gamedaytest",
+        "configurations" : [ ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "8lCjIgb3BqY2HMWhP85-z",
+    "source" : "nNKD4nuKUHjjFCmVjrkhQ",
+    "target" : "3oLleXS1FQYX5SZcubz9L",
+    "sourcePort" : "out",
+    "targetPort" : "3R00T1s_d-NhI2b7Noo60"
+  }, {
+    "id" : "tdFQpcAyrRVZiOWwk-oq-",
+    "source" : "3oLleXS1FQYX5SZcubz9L",
+    "target" : "BsAlJiNmF5ASVltmg8CSB",
+    "sourcePort" : "6C2l93jlR808swExEV-xD",
+    "targetPort" : "-Aro2e9_29lkBXsD2g0UW"
+  }, {
+    "id" : "hh7XZ-gxO7JaiDAFxKvRc",
+    "source" : "BsAlJiNmF5ASVltmg8CSB",
+    "target" : "LkUGEtz8J3-JOOKBM-CwX",
+    "sourcePort" : "PB-sgEd6BX-X3tM2yGtO8",
+    "targetPort" : "ZG_4CSNkNpcO_LLaBLV0y"
+  } ]
+}
