@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "933",
+    "fabricId" : "920",
     "frontEndLanguage" : "python",
     "mode" : "batch",
     "interimMode" : "Full",
@@ -248,10 +248,7 @@
       "properties" : {
         "columnsSelector" : [ "fbBbJLgdhSmNptnpfuvET##85" ],
         "dedupType" : "first",
-        "dedupColumns" : [ {
-          "format" : "python",
-          "expression" : "col(\"85\")"
-        } ]
+        "dedupColumns" : [ { } ]
       }
     },
     "QiINdRsIyOAZPd3keKCXo" : {
