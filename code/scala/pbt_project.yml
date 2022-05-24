@@ -1,6 +1,6 @@
 name: GameDay11thMay
 description: ''
-version: '2.0102'
+version: 2.0102-SNAPSHOT
 author: anshuman@simpledatalabs.com
 language: scala
 pipelines:
@@ -110,6 +110,18 @@ datasets:
         description: ''
         author: anshuman@simpledatalabs.com
         createdAt: '2022-05-12 10:12:53'
+  datasets/all_types:
+    name: all_types
+    description: ''
+    author: anshuman@simpledatalabs.com
+    createdAt: '2022-05-24 09:29:53'
+    physicalDatasets:
+      gamedayfabric:
+        fabricId: 920
+        datasetType: File
+        description: ''
+        author: anshuman@simpledatalabs.com
+        createdAt: '2022-05-24 09:29:53'
 jobs:
   jobs/testscheduler:
     name: testscheduler
